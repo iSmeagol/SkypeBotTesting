@@ -1,0 +1,11 @@
+@include media-xsm {
+    .register {
+        .float-label {
+            .password-constraint {
+                ul {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}

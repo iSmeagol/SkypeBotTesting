@@ -1,0 +1,35 @@
+{
+  "name": "meteorxreact-boilertemplate-v3",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@babel/runtime": "^7.14.6",
+    "antd": "^4.16.8",
+    "antd-password-input-strength": "^1.1.1",
+    "botbuilder": "^4.14.1",
+    "clamscan": "^1.4.2",
+    "fibers": "^5.0.0",
+    "history": "^4.10.1",
+    "ics": "^2.29.0",
+    "later": "^1.2.0",
+    "meteor-node-stubs": "^1.0.3",
+    "moment-timezone": "^0.5.33",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}

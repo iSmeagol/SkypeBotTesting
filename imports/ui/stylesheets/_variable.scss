@@ -1,0 +1,29 @@
+//** PARTIAL SCSS - PUT ALL THE VARIABLES THAT WE NEED HERE **//
+
+// font size variables
+$font-size-s: (
+    // 40px
+    'stand-out': 2.5rem,
+    // 35px
+    'big-font': 2.1875rem,
+    // 20px
+    'normal-1': 1.25rem,
+    // 16px
+    'normal-2': 1rem,
+    // 14px
+    'normal-3': 0.875rem,
+    // 12px
+    'normal-4': 0.75rem
+);
+
+// colors
+$colors: (
+    'primary': #f0f0f0,
+    'secondary': #656ee8,
+    'secondary-light': #656ee8ab,
+    'border-light': #f0f0f0,
+);
+
+// shadow
+$little-shadow: 0px 3px 8px #00000025;
+$more-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);

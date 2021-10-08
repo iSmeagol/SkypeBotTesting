@@ -1,0 +1,22 @@
+{
+    "public": {
+        "config": {
+            "title": "TMQ Template"
+        }
+    },
+    "config": {
+        "email": {
+            "info": {
+                "from": "Test <test@gmail.com>",
+                "siteName": "Test Site",
+                "supportEmail": "test@gmail.com"
+            },
+            "smtp": {
+                "username": "test@gmail.com",
+                "password": "gmailpass",
+                "host": "smtp.gmail.com",
+                "port": "587"
+            }
+        }
+    }
+}

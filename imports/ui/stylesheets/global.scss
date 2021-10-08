@@ -1,0 +1,10 @@
+@import 'variable';
+@import 'functions';
+@import 'init';
+@import 'globalResponsive';
+
+//** PUT ALL THE GLOBAL/COMPONENT STYLES HERE **//
+
+//** AUTH COMPONENTS
+@import '../components/auth/login/login.scss';
+@import '../components/auth/register/register.scss';

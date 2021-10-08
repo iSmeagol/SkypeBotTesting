@@ -1,0 +1,132 @@
+//** PARTIAL SCSS - PUT ALL THE FUNCTIONS/MIXINS THAT WE NEED HERE **//
+
+@function getColors($target) {
+    @return map-get($colors, $target);
+}
+
+@function getFontSize($target) {
+    @return map-get($font-size-s, $target);
+}
+
+@mixin setFontSize() {
+    .stand-out {
+        font-size: getFontSize(stand-out) !important;
+    }
+    .big-font {
+        font-size: getFontSize(big-font) !important;
+    }
+    .normal-1 {
+        font-size: getFontSize(normal-1) !important;
+    }
+    .normal-2 {
+        font-size: getFontSize(normal-2) !important;
+    }
+    .normal-3 {
+        font-size: getFontSize(normal-3) !important;
+    }
+    .normal-4 {
+        font-size: getFontSize(normal-4) !important;
+    }
+}
+
+@mixin setFlex($direction, $align1, $align2) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $align1;
+    align-items: $align2;
+    align-content: $align2;
+}
+
+/*
+* ignore touch screen devices for hover
+* must be inluded inside of an element to be hovered
+*/
+@mixin responsiveHover() {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin customScrollbar {
+    /* Designing for scroll-bar */
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: white;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: gray;
+    }
+}
+
+@mixin customBorder($left, $right, $top, $bottom) {
+    border-left: $left;
+    border-right: $right;
+    border-top: $top;
+    border-bottom: $bottom;
+    border-style: solid;
+    border-color: #f0f0f0;
+}
+
+// responsive mixin
+@mixin media-xsm {
+    @media screen and (min-width: 28.125em) {
+        // 450px
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 43.75em) {
+        // 700px
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 56.25em) {
+        // 900px
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 75em) {
+        // 1200px
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 118.75em) {
+        // 1900px
+        @content;
+    }
+}
+
+// ** OVERIED ANTD
+
+@mixin custom-antd-button($color, $colorHover) {
+    background: getColors($color) !important;
+    border-color: getColors($color);
+
+    @include responsiveHover {
+        background: getColors($colorHover);
+    }
+
+    @content;
+}
